@@ -7,16 +7,20 @@ class Game
 {
 private:
 	//Variables
-	sf::RenderWindow *window;
+	sf::RenderWindow* window;
 
 	sf::Clock dtClock;
 	float dt;
 
 	std::stack<State*> states;
 
+	std::map<std::string, int> supportedKeys;
+
 	//Initialization
 	void initWindow();
+	void initKeys();
 	void initStates();
+
 
 public:
 	//constructors and destructors
